@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cadastro Simples</title>
+  </head>
+  <body>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <h2>Cadastro de Usuário</h2>
+
+      <div>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required />
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div>
+        <label for="password">Senha:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="6"
+        />
+      </div>
+
+      <div>
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="data_nascimento" required />
+      </div>
+
+      <div>
+        <p>Sexo:</p>
+        <input
+          type="radio"
+          id="sexo_feminino"
+          name="sexo"
+          value="feminino"
+          required
+        />
+        <label for="sexo_feminino">Feminino</label>
+
+        <input type="radio" id="sexo_masculino" name="sexo" value="masculino" />
+        <label for="sexo_masculino">Masculino</label>
+
+        <input type="radio" id="sexo_outro" name="sexo" value="outro" />
+        <label for="sexo_outro">Outro</label>
+      </div>
+
+      <div>
+        <p>Qual sua área de interesse (Stack)?</p>
+        <input
+          type="checkbox"
+          id="stack_frontend"
+          name="stack[]"
+          value="frontend"
+        />
+        <label for="stack_frontend">Front-end</label>
+
+        <input
+          type="checkbox"
+          id="stack_backend"
+          name="stack[]"
+          value="backend"
+        />
+        <label for="stack_backend">Back-end</label>
+
+        <input
+          type="checkbox"
+          id="stack_banco"
+          name="stack[]"
+          value="banco_de_dados"
+        />
+        <label for="stack_banco">Banco de Dados</label>
+
+        <input
+          type="checkbox"
+          id="stack_outro"
+          name="stack[]"
+          value="outro_stack"
+        />
+        <label for="stack_outro">Outro</label>
+      </div>
+
+      <div>
+        <label for="foto">Foto de Perfil:</label>
+        <input type="file" id="foto" name="foto_perfil" accept="image/*" />
+      </div>
+
+      <button type="submit">Enviar Cadastro</button>
+      <button type="reset">Limpar Formulário</button>
+    </form>
+  </body>
+</html>
