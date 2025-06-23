@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Meter</title>
+  </head>
+  <body>
+    <h1>Uso de Disco</h1>
+
+    <label for="disk-usage">Espaço utilizado:</label>
+    <meter id="disk-usage" min="0" max="100" value="75">75%</meter>
+    <span>75% do total</span>
+
+    <br /><br />
+
+    <h1>Nota da Prova</h1>
+    <label for="exam-score">Sua nota:</label>
+    <meter
+      id="exam-score"
+      min="0"
+      max="10"
+      value="8.5"
+      low="6"
+      high="8"
+      optimum="9"
+    >
+      8.5 de 10
+    </meter>
+    <span>(Nota mínima para aprovação: 6, Nota alta: 8, Ótima nota: 9)</span>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Progress</title>
+  </head>
+  <body>
+    <h1>Download do Arquivo</h1>
+
+    <label for="file-progress">Progresso do Download:</label>
+    <progress id="file-progress" value="30" max="100">30%</progress>
+    <span>30% completo</span>
+
+    <p>Simulando um carregamento...</p>
+
+    <script>
+      // Exemplo simples de como o valor pode ser atualizado com JavaScript
+      let progressElement = document.getElementById("file-progress");
+      let percentage = document.querySelector("span");
+      let currentValue = 30;
+
+      function updateProgress() {
+        if (currentValue < 100) {
+          currentValue += 5;
+          progressElement.value = currentValue;
+          percentage.textContent = currentValue + "% completo";
+          setTimeout(updateProgress, 500); // Atualiza a cada 0.5 segundo
+        } else {
+          percentage.textContent = "Download Concluído!";
+        }
+      }
+
+      // Descomente a linha abaixo para ver a animação no navegador
+      // updateProgress();
+    </script>
+  </body>
+</html>
